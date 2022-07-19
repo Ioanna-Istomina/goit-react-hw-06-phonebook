@@ -18,11 +18,11 @@ const ContactList = () => {
 
   return (
     <>
-      {contacts.length === 0 ? (
+      {contacts?.length === 0 ? (
         'Phone book is empty'
       ) : (
         <ul className={s.list}>
-          {contacts.map(({ name, number, id }) => (
+          {contacts?.map(({ name, number, id }) => (
             <li key={id}>
               <p>
                 {name}: <span>{number}</span>
